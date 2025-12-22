@@ -1,0 +1,9 @@
+name = "Rustun"
+license = "MIT"
+description = "A minimal theme for Rustun VPN website"
+homepage = "https://github.com/smartethnet/rustun"
+min_version = "0.100.0"
+
+[author]
+  name = "Rustun Team"
+

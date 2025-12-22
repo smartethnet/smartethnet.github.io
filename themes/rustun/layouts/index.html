@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }}</title>
+    <meta name="description" content="{{ .Site.Params.description }}">
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/demo-animation.css" | relURL }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">🦀 Rustun</span>
+                <span class="version">v{{ .Site.Params.version }}</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">{{ if eq .Site.Language.Lang "zh" }}特性{{ else }}Features{{ end }}</a>
+                <a href="#download">{{ if eq .Site.Language.Lang "zh" }}下载{{ else }}Download{{ end }}</a>
+                <a href="{{ .Site.Params.github }}#readme" target="_blank">{{ if eq .Site.Language.Lang "zh" }}文档{{ else }}Docs{{ end }}</a>
+                <a href="{{ .Site.Params.github }}" target="_blank">GitHub</a>
+                <div class="lang-switch">
+                    {{ if eq .Site.Language.Lang "zh" }}
+                        <a href="{{ "/" | relURL }}" class="active">English</a>
+                    {{ else }}
+                        <a href="{{ "/zh/" | relURL }}" class="active">中文</a>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>{{ if eq .Site.Language.Lang "zh" }}
+                现代化的 VPN 隧道解决方案
+            {{ else }}
+                Modern VPN Tunnel Solution
+            {{ end }}</h1>
+            <p class="hero-subtitle">{{ if eq .Site.Language.Lang "zh" }}
+                开源 • 安全 • 多租户 • 简单易用
+            {{ else }}
+                Open Source • Secure • Multi-Tenant • Easy to Use
+            {{ end }}</p>
+            <div class="hero-cta">
+                <a href="#download" class="btn btn-primary">{{ if eq .Site.Language.Lang "zh" }}立即下载{{ else }}Download Now{{ end }}</a>
+                <a href="{{ .Site.Params.github }}" class="btn btn-secondary" target="_blank">{{ if eq .Site.Language.Lang "zh" }}查看源码{{ else }}View Source{{ end }}</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-value">MIT</div>
+                    <div class="stat-label">{{ if eq .Site.Language.Lang "zh" }}开源许可证{{ else }}Open Source{{ end }}</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">Multi-Tenant</div>
+                    <div class="stat-label">{{ if eq .Site.Language.Lang "zh" }}集群隔离{{ else }}Cluster Isolation{{ end }}</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">3 OS</div>
+                    <div class="stat-label">{{ if eq .Site.Language.Lang "zh" }}跨平台支持{{ else }}Cross-Platform{{ end }}</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Animation -->
+    {{ partial "demo-animation.html" . }}
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>{{ if eq .Site.Language.Lang "zh" }}核心特性{{ else }}Core Features{{ end }}</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>{{ if eq .Site.Language.Lang "zh" }}高性能{{ else }}High Performance{{ end }}</h3>
+                    <p>{{ if eq .Site.Language.Lang "zh" }}
+                        基于 Tokio 异步运行时，ChaCha20-Poly1305 加密，支持近线速传输
+                    {{ else }}
+                        Built on Tokio async runtime with ChaCha20-Poly1305 encryption for near line-rate performance
+                    {{ end }}</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>{{ if eq .Site.Language.Lang "zh" }}跨平台支持{{ else }}Cross-Platform{{ end }}</h3>
+                    <p>{{ if eq .Site.Language.Lang "zh" }}
+                        支持 Linux、macOS、Windows，提供预编译二进制文件
+                    {{ else }}
+                        Support for Linux, macOS, Windows with pre-built binaries
+                    {{ end }}</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>{{ if eq .Site.Language.Lang "zh" }}安全可靠{{ else }}Secure & Reliable{{ end }}</h3>
+                    <p>{{ if eq .Site.Language.Lang "zh" }}
+                        AEAD 加密、完美前向保密、重放保护，保障数据安全
+                    {{ else }}
+                        AEAD encryption, perfect forward secrecy, replay protection for data security
+                    {{ end }}</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏢</div>
+                    <h3>{{ if eq .Site.Language.Lang "zh" }}多租户{{ else }}Multi-Tenant{{ end }}</h3>
+                    <p>{{ if eq .Site.Language.Lang "zh" }}
+                        基于集群的组织隔离，不同集群完全隔离，互不干扰
+                    {{ else }}
+                        Cluster-based isolation with complete separation between tenants
+                    {{ end }}</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>{{ if eq .Site.Language.Lang "zh" }}简单易用{{ else }}Easy to Use{{ end }}</h3>
+                    <p>{{ if eq .Site.Language.Lang "zh" }}
+                        简洁的命令行接口，最小化配置，快速部署
+                    {{ else }}
+                        Simple CLI interface with minimal configuration for quick deployment
+                    {{ end }}</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h3>{{ if eq .Site.Language.Lang "zh" }}轻量级{{ else }}Lightweight{{ end }}</h3>
+                    <p>{{ if eq .Site.Language.Lang "zh" }}
+                        零依赖，低内存占用，单个连接仅需约 20 MB 内存
+                    {{ else }}
+                        Zero dependencies, low memory footprint (~20MB per connection)
+                    {{ end }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start Section -->
+    <section class="quickstart">
+        <div class="container">
+            <h2>{{ if eq .Site.Language.Lang "zh" }}快速开始{{ else }}Quick Start{{ end }}</h2>
+            <div class="quickstart-grid">
+                <div class="quickstart-step">
+                    <div class="step-number">1</div>
+                    <h3>{{ if eq .Site.Language.Lang "zh" }}下载二进制文件{{ else }}Download Binary{{ end }}</h3>
+                    <p>{{ if eq .Site.Language.Lang "zh" }}
+                        从 GitHub Releases 下载适合您系统的预编译版本
+                    {{ else }}
+                        Download pre-built binary for your platform from GitHub Releases
+                    {{ end }}</p>
+                </div>
+                <div class="quickstart-step">
+                    <div class="step-number">2</div>
+                    <h3>{{ if eq .Site.Language.Lang "zh" }}启动服务端{{ else }}Start Server{{ end }}</h3>
+                    <div class="code-block">
+                        <code>{{ if eq .Site.Language.Lang "zh" }}
+./server server.toml
+                        {{ else }}
+./server server.toml
+                        {{ end }}</code>
+                    </div>
+                </div>
+                <div class="quickstart-step">
+                    <div class="step-number">3</div>
+                    <h3>{{ if eq .Site.Language.Lang "zh" }}连接客户端{{ else }}Connect Client{{ end }}</h3>
+                    <div class="code-block">
+                        <code>{{ if eq .Site.Language.Lang "zh" }}
+./client -s SERVER:8080 -i client-001
+                        {{ else }}
+./client -s SERVER:8080 -i client-001
+                        {{ end }}</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <h2>{{ if eq .Site.Language.Lang "zh" }}下载{{ else }}Download{{ end }}</h2>
+            <p class="download-subtitle">{{ if eq .Site.Language.Lang "zh" }}
+                选择适合您平台的预编译二进制文件
+            {{ else }}
+                Choose the pre-built binary for your platform
+            {{ end }}</p>
+            <div class="download-grid">
+                <div class="download-card">
+                    <div class="platform-icon">🐧</div>
+                    <h3>Linux</h3>
+                    <div class="platform-options">
+                        <a href="https://github.com/smartethnet/rustun/releases/download/0.0.1/rustun-v0.0.1-x86_64-unknown-linux-gnu.tar.gz" class="download-link">x86_64 (glibc)</a>
+                        <a href="https://github.com/smartethnet/rustun/releases/download/0.0.1/rustun-v0.0.1-x86_64-unknown-linux-musl.tar.gz" class="download-link">x86_64 (musl)</a>
+                        <a href="https://github.com/smartethnet/rustun/releases/download/0.0.1/rustun-v0.0.1-aarch64-unknown-linux-gnu.tar.gz" class="download-link">ARM64 (glibc)</a>
+                        <a href="https://github.com/smartethnet/rustun/releases/download/0.0.1/rustun-v0.0.1-aarch64-unknown-linux-musl.tar.gz" class="download-link">ARM64 (musl)</a>
+                    </div>
+                </div>
+                <div class="download-card">
+                    <div class="platform-icon">🍎</div>
+                    <h3>macOS</h3>
+                    <div class="platform-options">
+                        <a href="https://github.com/smartethnet/rustun/releases/download/0.0.1/rustun-v0.0.1-x86_64-apple-darwin.tar.gz" class="download-link">Intel (x86_64)</a>
+                        <a href="https://github.com/smartethnet/rustun/releases/download/0.0.1/rustun-v0.0.1-aarch64-apple-darwin.tar.gz" class="download-link">Apple Silicon (ARM64)</a>
+                    </div>
+                </div>
+                <div class="download-card">
+                    <div class="platform-icon">🪟</div>
+                    <h3>Windows</h3>
+                    <div class="platform-options">
+                        <a href="https://github.com/smartethnet/rustun/releases/download/0.0.1/rustun-v0.0.1-x86_64-pc-windows-msvc.zip" class="download-link">x86_64 (MSVC)</a>
+                        <a href="https://www.wintun.net/" class="download-link secondary" target="_blank">{{ if eq .Site.Language.Lang "zh" }}下载 Wintun 驱动{{ else }}Download Wintun Driver{{ end }}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="download-footer">
+                <a href="{{ .Site.Params.github }}/releases" target="_blank" class="btn btn-outline">{{ if eq .Site.Language.Lang "zh" }}查看所有版本{{ else }}View All Releases{{ end }}</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Rustun</h4>
+                    <p>{{ if eq .Site.Language.Lang "zh" }}
+                        高性能 VPN 隧道解决方案
+                    {{ else }}
+                        Modern VPN Tunnel Solution
+                    {{ end }}</p>
+                </div>
+                <div class="footer-section">
+                    <h4>{{ if eq .Site.Language.Lang "zh" }}资源{{ else }}Resources{{ end }}</h4>
+                    <ul>
+                        <li><a href="{{ .Site.Params.github }}#readme" target="_blank">{{ if eq .Site.Language.Lang "zh" }}文档{{ else }}Documentation{{ end }}</a></li>
+                        <li><a href="{{ .Site.Params.github }}/releases" target="_blank">{{ if eq .Site.Language.Lang "zh" }}版本发布{{ else }}Releases{{ end }}</a></li>
+                        <li><a href="{{ .Site.Params.github }}/blob/main/BUILD.md" target="_blank">{{ if eq .Site.Language.Lang "zh" }}构建指南{{ else }}Build Guide{{ end }}</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>{{ if eq .Site.Language.Lang "zh" }}社区{{ else }}Community{{ end }}</h4>
+                    <ul>
+                        <li><a href="{{ .Site.Params.github }}/issues" target="_blank">{{ if eq .Site.Language.Lang "zh" }}问题反馈{{ else }}Issues{{ end }}</a></li>
+                        <li><a href="{{ .Site.Params.github }}/discussions" target="_blank">{{ if eq .Site.Language.Lang "zh" }}讨论区{{ else }}Discussions{{ end }}</a></li>
+                        <li><a href="{{ .Site.Params.github }}/blob/main/CONTRIBUTING.md" target="_blank">{{ if eq .Site.Language.Lang "zh" }}贡献指南{{ else }}Contributing{{ end }}</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>{{ if eq .Site.Language.Lang "zh" }}许可证{{ else }}License{{ end }}</h4>
+                    <p>MIT License</p>
+                    <p>© 2024 Rustun Team</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ "js/main.js" | relURL }}"></script>
+</body>
+</html>
+
