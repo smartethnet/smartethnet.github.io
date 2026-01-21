@@ -36,38 +36,76 @@
     <section class="hero">
         <div class="container">
             <h1>{{ if eq .Site.Language.Lang "zh" }}
-                现代化的 VPN 隧道解决方案
+                AI驱动的智能VPN隧道
             {{ else }}
-                Modern VPN Tunnel Solution
+                AI-Driven Intelligent VPN Tunnel
             {{ end }}</h1>
             <p class="hero-subtitle">{{ if eq .Site.Language.Lang "zh" }}
-                开源 • 安全 • 多租户 • 简单易用
+                100% 开源 • P2P直连 • 智能路由 • 多租户隔离
             {{ else }}
-                Open Source • Secure • Multi-Tenant • Easy to Use
+                100% Open Source • P2P Direct • Smart Routing • Multi-Tenant
             {{ end }}</p>
             <div class="hero-cta">
                 <a href="#download" class="btn btn-primary">{{ if eq .Site.Language.Lang "zh" }}立即下载{{ else }}Download Now{{ end }}</a>
                 <a href="{{ .Site.Params.github }}" class="btn btn-secondary" target="_blank">{{ if eq .Site.Language.Lang "zh" }}查看源码{{ else }}View Source{{ end }}</a>
             </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <div class="stat-value">MIT</div>
-                    <div class="stat-label">{{ if eq .Site.Language.Lang "zh" }}开源许可证{{ else }}Open Source{{ end }}</div>
+        </div>
+    </section>
+
+    <!-- Deployment Options Section -->
+    <section class="deployment">
+        <div class="container">
+            <h2>{{ if eq .Site.Language.Lang "zh" }}部署方式{{ else }}Deployment Options{{ end }}</h2>
+            <p class="section-subtitle">{{ if eq .Site.Language.Lang "zh" }}
+                选择适合您需求的部署方式
+            {{ else }}
+                Choose the deployment option that fits your needs
+            {{ end }}</p>
+            <div class="deployment-grid">
+                <div class="deployment-card">
+                    <div class="deployment-icon">🏠</div>
+                    <h3>{{ if eq .Site.Language.Lang "zh" }}自托管{{ else }}Self-Hosted{{ end }}</h3>
+                    <p>{{ if eq .Site.Language.Lang "zh" }}
+                        在自己的基础设施上部署，获得完全的控制权和数据主权
+                    {{ else }}
+                        Deploy on your own infrastructure for complete control and data sovereignty
+                    {{ end }}</p>
+                    <ul class="deployment-features">
+                        <li>✅ {{ if eq .Site.Language.Lang "zh" }}完全的数据主权{{ else }}Complete data sovereignty{{ end }}</li>
+                        <li>✅ {{ if eq .Site.Language.Lang "zh" }}完全自定义{{ else }}Full customization{{ end }}</li>
+                        <li>✅ {{ if eq .Site.Language.Lang "zh" }}无供应商锁定{{ else }}No vendor lock-in{{ end }}</li>
+                        <li>✅ {{ if eq .Site.Language.Lang "zh" }}成本效益{{ else }}Cost-effective{{ end }}</li>
+                    </ul>
+                    <a href="{{ .Site.Params.github }}" class="btn btn-primary" target="_blank">{{ if eq .Site.Language.Lang "zh" }}开始自托管{{ else }}Start Self-Hosting{{ end }}</a>
                 </div>
-                <div class="stat">
-                    <div class="stat-value">Multi-Tenant</div>
-                    <div class="stat-label">{{ if eq .Site.Language.Lang "zh" }}集群隔离{{ else }}Cluster Isolation{{ end }}</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-value">3 OS</div>
-                    <div class="stat-label">{{ if eq .Site.Language.Lang "zh" }}跨平台支持{{ else }}Cross-Platform{{ end }}</div>
+                <div class="deployment-card">
+                    <div class="deployment-icon">☁️</div>
+                    <h3>{{ if eq .Site.Language.Lang "zh" }}官方服务{{ else }}Official Service{{ end }}</h3>
+                    <p>{{ if eq .Site.Language.Lang "zh" }}
+                        使用我们托管的服务，无需部署服务端，通过可视化管理页面和AI交互式管理，享受无忧部署和专业支持
+                    {{ else }}
+                        Use our managed service with no server deployment required. Enjoy hassle-free deployment and professional support through visual management dashboard and AI-powered interactive management
+                    {{ end }}</p>
+                    <ul class="deployment-features">
+                        <li>✅ {{ if eq .Site.Language.Lang "zh" }}无需部署服务端{{ else }}No server deployment required{{ end }}</li>
+                        <li>✅ {{ if eq .Site.Language.Lang "zh" }}可视化管理页面{{ else }}Visual management dashboard{{ end }}</li>
+                        <li>✅ {{ if eq .Site.Language.Lang "zh" }}AI交互式管理{{ else }}AI-powered interactive management{{ end }}</li>
+                        <li>✅ {{ if eq .Site.Language.Lang "zh" }}零维护{{ else }}Zero maintenance{{ end }}</li>
+                        <li>✅ {{ if eq .Site.Language.Lang "zh" }}专业支持{{ else }}Professional support{{ end }}</li>
+                    </ul>
+                    <a href="https://rustun.beyondnetwork.cn" class="btn btn-secondary" target="_blank">{{ if eq .Site.Language.Lang "zh" }}访问官方服务{{ else }}Visit Official Service{{ end }}</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Demo Animation -->
-    {{ partial "demo-animation.html" . }}
+    <!-- Architecture Image -->
+    <section class="architecture-section">
+        <div class="container">
+            <h2 class="architecture-title">{{ if eq .Site.Language.Lang "zh" }}系统架构{{ else }}System Architecture{{ end }}</h2>
+            <img src="{{ "arch.png" | relURL }}" alt="{{ if eq .Site.Language.Lang "zh" }}系统架构图{{ else }}System Architecture{{ end }}" class="architecture-image">
+        </div>
+    </section>
 
     <!-- Features Section -->
     <section id="features" class="features">
@@ -76,11 +114,11 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
-                    <h3>{{ if eq .Site.Language.Lang "zh" }}高性能{{ else }}High Performance{{ end }}</h3>
+                    <h3>{{ if eq .Site.Language.Lang "zh" }}简单高效{{ else }}Simple & Fast{{ end }}</h3>
                     <p>{{ if eq .Site.Language.Lang "zh" }}
-                        基于 Tokio 异步运行时，ChaCha20-Poly1305 加密，支持近线速传输
+                        一行命令启动，基于 Tokio 异步运行时，ChaCha20-Poly1305 加密，支持近线速传输
                     {{ else }}
-                        Built on Tokio async runtime with ChaCha20-Poly1305 encryption for near line-rate performance
+                        One command to start. Built on Tokio async runtime with ChaCha20-Poly1305 encryption for near line-rate performance
                     {{ end }}</p>
                 </div>
                 <div class="feature-card">
@@ -112,20 +150,20 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🚀</div>
-                    <h3>{{ if eq .Site.Language.Lang "zh" }}简单易用{{ else }}Easy to Use{{ end }}</h3>
+                    <h3>{{ if eq .Site.Language.Lang "zh" }}智能路由{{ else }}Smart Routing{{ end }}</h3>
                     <p>{{ if eq .Site.Language.Lang "zh" }}
-                        简洁的命令行接口，最小化配置，快速部署
+                        三层智能路由：IPv6直连（最低延迟）→ STUN打洞（NAT穿透）→ 中继模式（兜底）
                     {{ else }}
-                        Simple CLI interface with minimal configuration for quick deployment
+                        Three-tier intelligent routing: IPv6 direct → STUN hole punching → Relay mode with auto-fallback
                     {{ end }}</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">📦</div>
-                    <h3>{{ if eq .Site.Language.Lang "zh" }}轻量级{{ else }}Lightweight{{ end }}</h3>
+                    <div class="feature-icon">🔓</div>
+                    <h3>{{ if eq .Site.Language.Lang "zh" }}开源免费{{ else }}Open Source{{ end }}</h3>
                     <p>{{ if eq .Site.Language.Lang "zh" }}
-                        零依赖，低内存占用，单个连接仅需约 20 MB 内存
+                        MIT 许可证，完全免费透明，代码可审计，避免供应商锁定
                     {{ else }}
-                        Zero dependencies, low memory footprint (~20MB per connection)
+                        MIT License, completely free and transparent, code auditable, no vendor lock-in
                     {{ end }}</p>
                 </div>
             </div>
@@ -133,9 +171,14 @@
     </section>
 
     <!-- Quick Start Section -->
-    <section class="quickstart">
+    <section id="quickstart" class="quickstart">
         <div class="container">
             <h2>{{ if eq .Site.Language.Lang "zh" }}快速开始{{ else }}Quick Start{{ end }}</h2>
+            <p class="section-subtitle">{{ if eq .Site.Language.Lang "zh" }}
+                自托管部署指南
+            {{ else }}
+                Self-hosted deployment guide
+            {{ end }}</p>
             <div class="quickstart-grid">
                 <div class="quickstart-step">
                     <div class="step-number">1</div>
@@ -186,25 +229,25 @@
                     <div class="platform-icon">🐧</div>
                     <h3>Linux</h3>
                     <div class="platform-options">
-                        <a href="https://github.com/smartethnet/rustun/releases/download/0.0.1/rustun-v0.0.1-x86_64-unknown-linux-gnu.tar.gz" class="download-link">x86_64 (glibc)</a>
-                        <a href="https://github.com/smartethnet/rustun/releases/download/0.0.1/rustun-v0.0.1-x86_64-unknown-linux-musl.tar.gz" class="download-link">x86_64 (musl)</a>
-                        <a href="https://github.com/smartethnet/rustun/releases/download/0.0.1/rustun-v0.0.1-aarch64-unknown-linux-gnu.tar.gz" class="download-link">ARM64 (glibc)</a>
-                        <a href="https://github.com/smartethnet/rustun/releases/download/0.0.1/rustun-v0.0.1-aarch64-unknown-linux-musl.tar.gz" class="download-link">ARM64 (musl)</a>
+                        <a href="https://github.com/smartethnet/rustun/releases/download/1.0.1/rustun-1.0.1-x86_64-unknown-linux-gnu.tar.gz" class="download-link">x86_64 (glibc)</a>
+                        <a href="https://github.com/smartethnet/rustun/releases/download/1.0.1/rustun-1.0.1-x86_64-unknown-linux-musl.tar.gz" class="download-link">x86_64 (musl)</a>
+                        <a href="https://github.com/smartethnet/rustun/releases/download/1.0.1/rustun-1.0.1-aarch64-unknown-linux-gnu.tar.gz" class="download-link">ARM64 (glibc)</a>
+                        <a href="https://github.com/smartethnet/rustun/releases/download/1.0.1/rustun-1.0.1-aarch64-unknown-linux-musl.tar.gz" class="download-link">ARM64 (musl)</a>
                     </div>
                 </div>
                 <div class="download-card">
                     <div class="platform-icon">🍎</div>
                     <h3>macOS</h3>
                     <div class="platform-options">
-                        <a href="https://github.com/smartethnet/rustun/releases/download/0.0.1/rustun-v0.0.1-x86_64-apple-darwin.tar.gz" class="download-link">Intel (x86_64)</a>
-                        <a href="https://github.com/smartethnet/rustun/releases/download/0.0.1/rustun-v0.0.1-aarch64-apple-darwin.tar.gz" class="download-link">Apple Silicon (ARM64)</a>
+                        <a href="https://github.com/smartethnet/rustun/releases/download/1.0.1/rustun-1.0.1-x86_64-apple-darwin.tar.gz" class="download-link">Intel (x86_64)</a>
+                        <a href="https://github.com/smartethnet/rustun/releases/download/1.0.1/rustun-1.0.1-aarch64-apple-darwin.tar.gz" class="download-link">Apple Silicon (ARM64)</a>
                     </div>
                 </div>
                 <div class="download-card">
                     <div class="platform-icon">🪟</div>
                     <h3>Windows</h3>
                     <div class="platform-options">
-                        <a href="https://github.com/smartethnet/rustun/releases/download/0.0.1/rustun-v0.0.1-x86_64-pc-windows-msvc.zip" class="download-link">x86_64 (MSVC)</a>
+                        <a href="https://github.com/smartethnet/rustun/releases/download/1.0.1/rustun-1.0.1-x86_64-pc-windows-msvc.zip" class="download-link">x86_64 (MSVC)</a>
                         <a href="https://www.wintun.net/" class="download-link secondary" target="_blank">{{ if eq .Site.Language.Lang "zh" }}下载 Wintun 驱动{{ else }}Download Wintun Driver{{ end }}</a>
                     </div>
                 </div>
@@ -246,7 +289,7 @@
                 <div class="footer-section">
                     <h4>{{ if eq .Site.Language.Lang "zh" }}许可证{{ else }}License{{ end }}</h4>
                     <p>MIT License</p>
-                    <p>© 2024 Rustun Team</p>
+                    <p>© 2026 Rustun Team</p>
                 </div>
             </div>
         </div>

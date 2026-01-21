@@ -14,7 +14,7 @@
     --text-light: #636e72;
     --border-color: #e1e8ed;
     --success-color: #00b894;
-    --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
 }
 
 html {
@@ -112,20 +112,20 @@ body {
 /* Hero Section */
 .hero {
     padding: 150px 0 100px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
     color: white;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     font-weight: 800;
     margin-bottom: 1rem;
     line-height: 1.2;
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 2rem;
     opacity: 0.95;
     font-weight: 300;
@@ -150,7 +150,7 @@ body {
 
 .btn-primary {
     background: white;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .btn-primary:hover {
@@ -166,17 +166,17 @@ body {
 
 .btn-secondary:hover {
     background: white;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .btn-outline {
     background: transparent;
-    color: var(--secondary-color);
-    border: 2px solid var(--secondary-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
 }
 
 .btn-outline:hover {
-    background: var(--secondary-color);
+    background: var(--primary-color);
     color: white;
 }
 
@@ -192,7 +192,7 @@ body {
 }
 
 .stat-value {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
@@ -200,6 +200,67 @@ body {
 .stat-label {
     opacity: 0.9;
     font-size: 0.95rem;
+}
+
+/* Architecture Section */
+.architecture-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.architecture-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.architecture-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 1024px) {
+    .architecture-image {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .architecture-section {
+        padding: 60px 0;
+    }
+    
+    .architecture-title {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .architecture-image {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .architecture-section {
+        padding: 40px 0;
+    }
+    
+    .architecture-title {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    
+    .architecture-image {
+        padding: 0 10px;
+    }
 }
 
 /* Features Section */
@@ -210,8 +271,8 @@ body {
 
 .features h2 {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
     font-weight: 700;
 }
 
@@ -235,19 +296,132 @@ body {
 }
 
 .feature-icon {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 .feature-card h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-bottom: 0.8rem;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .feature-card p {
     color: var(--text-light);
     line-height: 1.7;
+}
+
+/* Deployment Options Section */
+.deployment {
+    padding: 100px 0;
+    background: var(--light-bg);
+}
+
+.deployment h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+.deployment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.deployment-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.deployment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.deployment-icon {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.deployment-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.deployment-badge {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.deployment-card p {
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.deployment-features {
+    list-style: none;
+    margin: 1.5rem 0;
+    padding: 0;
+}
+
+.deployment-features li {
+    padding: 0.5rem 0;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.deployment-card .btn {
+    width: 100%;
+    margin-top: 1.5rem;
+    text-align: center;
+    display: inline-block;
+}
+
+.deployment-card .btn-primary {
+    background: var(--primary-color);
+    color: white;
+    border: 2px solid var(--primary-color);
+}
+
+.deployment-card .btn-primary:hover {
+    background: #ff8c42;
+    border-color: #ff8c42;
+    color: white;
+}
+
+.deployment-card .btn-secondary {
+    background: var(--primary-color);
+    color: white;
+    border: 2px solid var(--primary-color);
+}
+
+.deployment-card .btn-secondary:hover {
+    background: #ff8c42;
+    border-color: #ff8c42;
+    color: white;
 }
 
 /* Quick Start Section */
@@ -258,8 +432,8 @@ body {
 
 .quickstart h2 {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
     font-weight: 700;
 }
 
@@ -289,9 +463,9 @@ body {
 }
 
 .quickstart-step h3 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin-bottom: 1rem;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .quickstart-step p {
@@ -323,7 +497,7 @@ body {
 
 .download h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     font-weight: 700;
 }
@@ -356,9 +530,9 @@ body {
 }
 
 .download-card h3 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     margin-bottom: 1.5rem;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .platform-options {
@@ -385,11 +559,11 @@ body {
 
 .download-link.secondary {
     background: var(--light-bg);
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .download-link.secondary:hover {
-    background: var(--secondary-color);
+    background: var(--primary-color);
     color: white;
 }
 
@@ -454,11 +628,11 @@ body {
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .hero-cta {
@@ -476,13 +650,15 @@ body {
 
     .features h2,
     .quickstart h2,
-    .download h2 {
+    .download h2,
+    .deployment h2 {
         font-size: 2rem;
     }
 
     .features-grid,
     .quickstart-grid,
-    .download-grid {
+    .download-grid,
+    .deployment-grid {
         grid-template-columns: 1fr;
     }
 }
@@ -493,11 +669,11 @@ body {
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .btn {

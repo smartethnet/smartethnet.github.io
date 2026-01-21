@@ -15,7 +15,7 @@
         <div class="container">
             <div class="nav-brand">
                 <span class="logo">🦀 Rustun</span>
-                <span class="version">v0.0.1</span>
+                <span class="version">v1.0.1</span>
             </div>
             <div class="nav-links">
                 <a href="#features">特性</a>
@@ -35,207 +35,66 @@
     <section class="hero">
         <div class="container">
             <h1>
-                现代化的 VPN 隧道解决方案
+                AI驱动的智能VPN隧道
             </h1>
             <p class="hero-subtitle">
-                开源 • 安全 • 多租户 • 简单易用
+                100% 开源 • P2P直连 • 智能路由 • 多租户隔离
             </p>
             <div class="hero-cta">
                 <a href="#download" class="btn btn-primary">立即下载</a>
                 <a href="https://github.com/smartethnet/rustun" class="btn btn-secondary" target="_blank">查看源码</a>
             </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <div class="stat-value">MIT</div>
-                    <div class="stat-label">开源许可证</div>
+        </div>
+    </section>
+
+    
+    <section class="deployment">
+        <div class="container">
+            <h2>部署方式</h2>
+            <p class="section-subtitle">
+                选择适合您需求的部署方式
+            </p>
+            <div class="deployment-grid">
+                <div class="deployment-card">
+                    <div class="deployment-icon">🏠</div>
+                    <h3>自托管</h3>
+                    <p>
+                        在自己的基础设施上部署，获得完全的控制权和数据主权
+                    </p>
+                    <ul class="deployment-features">
+                        <li>✅ 完全的数据主权</li>
+                        <li>✅ 完全自定义</li>
+                        <li>✅ 无供应商锁定</li>
+                        <li>✅ 成本效益</li>
+                    </ul>
+                    <a href="https://github.com/smartethnet/rustun" class="btn btn-primary" target="_blank">开始自托管</a>
                 </div>
-                <div class="stat">
-                    <div class="stat-value">Multi-Tenant</div>
-                    <div class="stat-label">集群隔离</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-value">3 OS</div>
-                    <div class="stat-label">跨平台支持</div>
+                <div class="deployment-card">
+                    <div class="deployment-icon">☁️</div>
+                    <h3>官方服务</h3>
+                    <p>
+                        使用我们托管的服务，无需部署服务端，通过可视化管理页面和AI交互式管理，享受无忧部署和专业支持
+                    </p>
+                    <ul class="deployment-features">
+                        <li>✅ 无需部署服务端</li>
+                        <li>✅ 可视化管理页面</li>
+                        <li>✅ AI交互式管理</li>
+                        <li>✅ 零维护</li>
+                        <li>✅ 专业支持</li>
+                    </ul>
+                    <a href="https://rustun.beyondnetwork.cn" class="btn btn-secondary" target="_blank">访问官方服务</a>
                 </div>
             </div>
         </div>
     </section>
 
     
-    
-<section class="demo-section">
-    <div class="demo-container">
-        <h2 class="demo-title">工作原理</h2>
-        <p class="demo-subtitle">
-            多租户架构，集群隔离，安全连接
-        </p>
-        
-        <div class="demo-svg-wrapper">
-            <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-                
-                <defs>
-                    <linearGradient id="clusterAGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
-                    </linearGradient>
-                    <linearGradient id="clusterBGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
-                    </linearGradient>
-                    <linearGradient id="serverGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
-                    </linearGradient>
-                    
-                    
-                    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-                        <polygon points="0 0, 10 3, 0 6" fill="#667eea" opacity="0.6" />
-                    </marker>
-                </defs>
-                
-                
-                <rect width="800" height="400" fill="#f8f9fa" opacity="0.3" rx="8"/>
-                
-                
-                
-                <path d="M 150 120 Q 300 120, 380 200" stroke="#667eea" stroke-width="2" fill="none" 
-                      opacity="0.4" stroke-dasharray="10 5" class="connection-line" marker-end="url(#arrowhead)"/>
-                <path d="M 150 180 Q 300 180, 380 200" stroke="#667eea" stroke-width="2" fill="none" 
-                      opacity="0.4" stroke-dasharray="10 5" class="connection-line" style="animation-delay: 0.5s;" marker-end="url(#arrowhead)"/>
-                
-                
-                <path d="M 650 120 Q 500 120, 420 200" stroke="#f093fb" stroke-width="2" fill="none" 
-                      opacity="0.4" stroke-dasharray="10 5" class="connection-line" style="animation-delay: 1s;" marker-end="url(#arrowhead)"/>
-                <path d="M 650 280 Q 500 280, 420 200" stroke="#f093fb" stroke-width="2" fill="none" 
-                      opacity="0.4" stroke-dasharray="10 5" class="connection-line" style="animation-delay: 1.5s;" marker-end="url(#arrowhead)"/>
-                
-                
-                <g id="clusterA">
-                    
-                    <rect x="30" y="80" width="180" height="140" rx="12" fill="url(#clusterAGradient)" opacity="0.1" stroke="#667eea" stroke-width="2" stroke-dasharray="5,5"/>
-                    
-                    
-                    <g class="node-pulse">
-                        <circle cx="100" cy="120" r="25" fill="url(#clusterAGradient)" opacity="0.9"/>
-                        <text x="100" y="125" text-anchor="middle" fill="white" font-size="12" font-weight="bold">
-                            办公室
-                        </text>
-                    </g>
-                    
-                    
-                    <g class="node-pulse" style="animation-delay: 0.5s;">
-                        <circle cx="100" cy="180" r="25" fill="url(#clusterAGradient)" opacity="0.9"/>
-                        <text x="100" y="185" text-anchor="middle" fill="white" font-size="12" font-weight="bold">
-                            开发
-                        </text>
-                    </g>
-                    
-                    
-                    <text x="120" y="50" font-size="16" font-weight="bold" fill="#667eea">
-                        集群 A (北京)
-                    </text>
-                    <text x="120" y="240" font-size="11" fill="#666" text-anchor="middle">10.0.1.0/24</text>
-                </g>
-                
-                
-                <g id="server" class="server-glow">
-                    <circle cx="400" cy="200" r="45" fill="url(#serverGradient)" opacity="0.95"/>
-                    <text x="400" y="195" text-anchor="middle" fill="white" font-size="14" font-weight="bold">
-                        中心
-                    </text>
-                    <text x="400" y="210" text-anchor="middle" fill="white" font-size="14" font-weight="bold">
-                        服务器
-                    </text>
-                    
-                    
-                    <g transform="translate(400, 235)">
-                        <circle r="12" fill="white" opacity="0.9"/>
-                        <text x="0" y="5" text-anchor="middle" font-size="14">🔒</text>
-                    </g>
-                    
-                    <text x="400" y="275" font-size="11" fill="#666" text-anchor="middle">
-                        加密隧道
-                    </text>
-                </g>
-                
-                
-                <g id="clusterB">
-                    
-                    <rect x="590" y="80" width="180" height="220" rx="12" fill="url(#clusterBGradient)" opacity="0.1" stroke="#f093fb" stroke-width="2" stroke-dasharray="5,5"/>
-                    
-                    
-                    <g class="node-pulse" style="animation-delay: 1s;">
-                        <circle cx="700" cy="120" r="25" fill="url(#clusterBGradient)" opacity="0.9"/>
-                        <text x="700" y="125" text-anchor="middle" fill="white" font-size="12" font-weight="bold">
-                            办公室
-                        </text>
-                    </g>
-                    
-                    
-                    <g class="node-pulse" style="animation-delay: 1.5s;">
-                        <circle cx="700" cy="280" r="25" fill="url(#clusterBGradient)" opacity="0.9"/>
-                        <text x="700" y="285" text-anchor="middle" fill="white" font-size="12" font-weight="bold">
-                            数据库
-                        </text>
-                    </g>
-                    
-                    
-                    <text x="680" y="50" font-size="16" font-weight="bold" fill="#f093fb">
-                        集群 B (上海)
-                    </text>
-                    <text x="680" y="330" font-size="11" fill="#666" text-anchor="middle">10.0.2.0/24</text>
-                </g>
-                
-                
-                <g transform="translate(400, 330)">
-                    <line x1="-100" y1="0" x2="100" y2="0" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="5,5" opacity="0.6"/>
-                    <text x="0" y="20" text-anchor="middle" font-size="12" fill="#ff6b6b" font-weight="bold">
-                        ✗ 集群间隔离 ✗
-                    </text>
-                </g>
-                
-                
-                <g transform="translate(50, 350)">
-                    <rect width="110" height="30" rx="15" fill="#667eea" opacity="0.15"/>
-                    <text x="55" y="20" text-anchor="middle" font-size="13" fill="#667eea" font-weight="600">
-                        🔐 加密传输
-                    </text>
-                </g>
-                
-                <g transform="translate(340, 350)">
-                    <rect width="120" height="30" rx="15" fill="#4facfe" opacity="0.15"/>
-                    <text x="60" y="20" text-anchor="middle" font-size="13" fill="#4facfe" font-weight="600">
-                        🏢 多租户
-                    </text>
-                </g>
-                
-                <g transform="translate(640, 350)">
-                    <rect width="110" height="30" rx="15" fill="#f093fb" opacity="0.15"/>
-                    <text x="55" y="20" text-anchor="middle" font-size="13" fill="#f093fb" font-weight="600">
-                        🚀 简单易用
-                    </text>
-                </g>
-            </svg>
+    <section class="architecture-section">
+        <div class="container">
+            <h2 class="architecture-title">系统架构</h2>
+            <img src="/arch.png" alt="系统架构图" class="architecture-image">
         </div>
-        
-        <div class="demo-legend">
-            <div class="legend-item">
-                <div class="legend-box legend-cluster-a"></div>
-                <span>集群 A - 内网互通</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-box legend-cluster-b"></div>
-                <span>集群 B - 内网互通</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-box legend-server"></div>
-                <span>中心服务器 - 加密转发</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-
+    </section>
 
     
     <section id="features" class="features">
@@ -244,9 +103,9 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
-                    <h3>高性能</h3>
+                    <h3>简单高效</h3>
                     <p>
-                        基于 Tokio 异步运行时，ChaCha20-Poly1305 加密，支持近线速传输
+                        一行命令启动，基于 Tokio 异步运行时，ChaCha20-Poly1305 加密，支持近线速传输
                     </p>
                 </div>
                 <div class="feature-card">
@@ -272,16 +131,16 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🚀</div>
-                    <h3>简单易用</h3>
+                    <h3>智能路由</h3>
                     <p>
-                        简洁的命令行接口，最小化配置，快速部署
+                        三层智能路由：IPv6直连（最低延迟）→ STUN打洞（NAT穿透）→ 中继模式（兜底）
                     </p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">📦</div>
-                    <h3>轻量级</h3>
+                    <div class="feature-icon">🔓</div>
+                    <h3>开源免费</h3>
                     <p>
-                        零依赖，低内存占用，单个连接仅需约 20 MB 内存
+                        MIT 许可证，完全免费透明，代码可审计，避免供应商锁定
                     </p>
                 </div>
             </div>
@@ -289,9 +148,12 @@
     </section>
 
     
-    <section class="quickstart">
+    <section id="quickstart" class="quickstart">
         <div class="container">
             <h2>快速开始</h2>
+            <p class="section-subtitle">
+                自托管部署指南
+            </p>
             <div class="quickstart-grid">
                 <div class="quickstart-step">
                     <div class="step-number">1</div>
@@ -334,25 +196,25 @@
                     <div class="platform-icon">🐧</div>
                     <h3>Linux</h3>
                     <div class="platform-options">
-                        <a href="https://github.com/smartethnet/rustun/releases/download/0.0.1/rustun-v0.0.1-x86_64-unknown-linux-gnu.tar.gz" class="download-link">x86_64 (glibc)</a>
-                        <a href="https://github.com/smartethnet/rustun/releases/download/0.0.1/rustun-v0.0.1-x86_64-unknown-linux-musl.tar.gz" class="download-link">x86_64 (musl)</a>
-                        <a href="https://github.com/smartethnet/rustun/releases/download/0.0.1/rustun-v0.0.1-aarch64-unknown-linux-gnu.tar.gz" class="download-link">ARM64 (glibc)</a>
-                        <a href="https://github.com/smartethnet/rustun/releases/download/0.0.1/rustun-v0.0.1-aarch64-unknown-linux-musl.tar.gz" class="download-link">ARM64 (musl)</a>
+                        <a href="https://github.com/smartethnet/rustun/releases/download/1.0.1/rustun-1.0.1-x86_64-unknown-linux-gnu.tar.gz" class="download-link">x86_64 (glibc)</a>
+                        <a href="https://github.com/smartethnet/rustun/releases/download/1.0.1/rustun-1.0.1-x86_64-unknown-linux-musl.tar.gz" class="download-link">x86_64 (musl)</a>
+                        <a href="https://github.com/smartethnet/rustun/releases/download/1.0.1/rustun-1.0.1-aarch64-unknown-linux-gnu.tar.gz" class="download-link">ARM64 (glibc)</a>
+                        <a href="https://github.com/smartethnet/rustun/releases/download/1.0.1/rustun-1.0.1-aarch64-unknown-linux-musl.tar.gz" class="download-link">ARM64 (musl)</a>
                     </div>
                 </div>
                 <div class="download-card">
                     <div class="platform-icon">🍎</div>
                     <h3>macOS</h3>
                     <div class="platform-options">
-                        <a href="https://github.com/smartethnet/rustun/releases/download/0.0.1/rustun-v0.0.1-x86_64-apple-darwin.tar.gz" class="download-link">Intel (x86_64)</a>
-                        <a href="https://github.com/smartethnet/rustun/releases/download/0.0.1/rustun-v0.0.1-aarch64-apple-darwin.tar.gz" class="download-link">Apple Silicon (ARM64)</a>
+                        <a href="https://github.com/smartethnet/rustun/releases/download/1.0.1/rustun-1.0.1-x86_64-apple-darwin.tar.gz" class="download-link">Intel (x86_64)</a>
+                        <a href="https://github.com/smartethnet/rustun/releases/download/1.0.1/rustun-1.0.1-aarch64-apple-darwin.tar.gz" class="download-link">Apple Silicon (ARM64)</a>
                     </div>
                 </div>
                 <div class="download-card">
                     <div class="platform-icon">🪟</div>
                     <h3>Windows</h3>
                     <div class="platform-options">
-                        <a href="https://github.com/smartethnet/rustun/releases/download/0.0.1/rustun-v0.0.1-x86_64-pc-windows-msvc.zip" class="download-link">x86_64 (MSVC)</a>
+                        <a href="https://github.com/smartethnet/rustun/releases/download/1.0.1/rustun-1.0.1-x86_64-pc-windows-msvc.zip" class="download-link">x86_64 (MSVC)</a>
                         <a href="https://www.wintun.net/" class="download-link secondary" target="_blank">下载 Wintun 驱动</a>
                     </div>
                 </div>
@@ -392,7 +254,7 @@
                 <div class="footer-section">
                     <h4>许可证</h4>
                     <p>MIT License</p>
-                    <p>© 2024 Rustun Team</p>
+                    <p>© 2026 Rustun Team</p>
                 </div>
             </div>
         </div>

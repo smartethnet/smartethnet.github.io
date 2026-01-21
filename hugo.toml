@@ -24,7 +24,9 @@ defaultContentLanguageInSubdir = false
 
 [params]
   github = 'https://github.com/smartethnet/rustun'
-  version = '0.0.1'
+  version = '1.0.1'
+  demo_server = 'https://rustun.beyondnetwork.cn'
+  demo_server_addr = 'rustun.demo.beyondnetwork.cn:18080'
 
 [menu]
   [[menu.main]]
